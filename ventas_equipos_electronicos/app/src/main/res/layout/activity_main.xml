@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/myconstraint"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pantallaResultado"
+        android:layout_width="309dp"
+        android:visibility="gone"
+        android:layout_height="179dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="30dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintVertical_bias="0.49">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="20dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:autoSizeTextType="uniform"
+                android:text="El total a pagar es"
+                android:textColor="@color/black"
+                android:textSize="26dp" />
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="20dp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="0.0"
+                android:textColor="#0F3A95"
+                android:textSize="26dp" />
+
+            <Button
+                android:id="@+id/btnAtras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:backgroundTint="#B02509"
+                android:elevation="15dp"
+                android:onClick="onClick"
+                android:text="Atrás"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+
+        android:visibility="visible"
+        android:id="@+id/scroll_Todo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="13dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/estilo_banner"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+
+                <ImageView
+                    android:layout_width="196dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/fondoe_foreground"
+                    android:elevation="16dp">
+
+                </ImageView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#0F3A95"
+                    android:elevation="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="Computadores"
+                    android:textColor="@color/white"
+                    android:textSize="26dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9dp"
+                    android:orientation="vertical">
+
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="13dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="30dp"
+                            app:cardCornerRadius="19dp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="6dp"
+                                    android:background="@color/white"
+                                    android:orientation="horizontal">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:elevation="12dp"
+                                        app:cardCornerRadius="6dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="#212223"
+                                                android:elevation="6dp"
+                                                android:gravity="center"
+                                                android:text="Compac"
+                                                android:textColor="@color/white"
+                                                android:textSize="20dp" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@mipmap/computador_compac_foreground" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:autoSizeTextType="uniform"
+                                                android:elevation="6dp"
+                                                android:text="$ 1.000.000"
+                                                android:textColor="#0F3A95"
+                                                android:textSize="17dp" />
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <!-- primera computadora-->
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:elevation="12dp"
+                                        app:cardCornerRadius="6dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="#212223"
+                                                android:elevation="6dp"
+                                                android:gravity="center"
+                                                android:text="Dell"
+                                                android:textColor="@color/white"
+                                                android:textSize="20dp" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@mipmap/computador_dell_foreground" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:autoSizeTextType="uniform"
+                                                android:elevation="6dp"
+                                                android:text="$ 2.000.000"
+                                                android:textColor="#0F3A95"
+                                                android:textSize="17dp" />
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                    <!-- segunda computadora-->
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:elevation="12dp"
+                                        app:cardCornerRadius="6dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/white"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="#212223"
+                                                android:elevation="6dp"
+                                                android:gravity="center"
+                                                android:text="Sony"
+                                                android:textColor="@color/white"
+                                                android:textSize="20dp" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@mipmap/computador_sony_foreground" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:autoSizeTextType="uniform"
+                                                android:elevation="6dp"
+                                                android:text="$ 1.500.000"
+                                                android:textColor="#0F3A95"
+                                                android:textSize="17dp" />
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <RadioGroup
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:id="@+id/radio1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="13dp"
+                                            android:buttonTint="#0F3A95"
+                                            android:text="Añadir"
+                                            android:textColor="@color/black"
+                                            android:textSize="18dp" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="13dp"
+                                            android:buttonTint="#0F3A95"
+                                            android:text="Añadir"
+                                            android:textColor="@color/black"
+                                            android:textSize="18dp" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="13dp"
+                                            android:buttonTint="#0F3A95"
+                                            android:text="Añadir"
+                                            android:textColor="@color/black"
+                                            android:textSize="18dp" />
+                                    </RadioGroup>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#0F3A95"
+                    android:elevation="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="Equipos de oficina"
+                    android:textColor="@color/white"
+                    android:textSize="26dp" />
+                <!--fin primer scroll-->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:elevation="13dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="25dp"
+                        app:cardCornerRadius="19dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="6dp"
+                                android:background="@color/white"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:elevation="12dp"
+                                    app:cardCornerRadius="6dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/white"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="#212223"
+                                            android:elevation="6dp"
+                                            android:gravity="center"
+                                            android:text="Impresora"
+                                            android:textColor="@color/white"
+                                            android:textSize="20dp" />
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@mipmap/impresora_foreground" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:autoSizeTextType="uniform"
+                                            android:elevation="6dp"
+                                            android:text="$ 150.000"
+                                            android:textColor="#0F3A95"
+                                            android:textSize="17dp" />
+
+                                        <CheckBox
+                                            android:id="@+id/checkbox1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="#0F3A95"
+                                            android:text="Seleccionar"
+                                            android:textColor="@color/black"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <!-- primera computadora-->
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:elevation="12dp"
+                                    app:cardCornerRadius="6dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/white"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="#212223"
+                                            android:elevation="6dp"
+                                            android:gravity="center"
+                                            android:text="Scanner"
+                                            android:textColor="@color/white"
+                                            android:textSize="20dp" />
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@mipmap/scanner_foreground" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:autoSizeTextType="uniform"
+                                            android:elevation="6dp"
+                                            android:text="$ 250.000"
+                                            android:textColor="#0F3A95"
+                                            android:textSize="17dp" />
+
+                                        <CheckBox
+                                            android:id="@+id/checkbox2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="#0F3A95"
+                                            android:text="Seleccionar"
+                                            android:textColor="@color/black"
+                                            android:textSize="12dp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+                                <!-- segunda computadora-->
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    android:elevation="12dp"
+                                    app:cardCornerRadius="6dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/white"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="#212223"
+                                            android:elevation="6dp"
+                                            android:gravity="center"
+                                            android:text="Escritorio"
+                                            android:textColor="@color/white"
+                                            android:textSize="20dp" />
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@mipmap/escritorio_foreground" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:autoSizeTextType="uniform"
+                                            android:elevation="6dp"
+                                            android:text="$ 200.000"
+                                            android:textColor="#0F3A95"
+                                            android:textSize="17dp" />
+
+                                        <CheckBox
+                                            android:id="@+id/checkbox3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:button="?android:attr/listChoiceIndicatorMultiple"
+                                            android:buttonTint="#0F3A95"
+                                            android:text="Seleccionar"
+                                            android:textColor="@color/black"
+                                            android:textSize="12dp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnComprar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#1CC338"
+                android:elevation="30dp"
+                android:onClick="onClick"
+                android:rotationX="4"
+                android:text="¡COMPRAR!"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
