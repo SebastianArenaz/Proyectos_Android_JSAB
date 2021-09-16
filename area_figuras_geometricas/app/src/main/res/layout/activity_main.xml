@@ -214,7 +214,6 @@
                 android:background="@drawable/radio_selector"
                 android:button="@android:color/transparent"
                 android:elevation="6dp"
-                android:onClick="darclik"
                 android:padding="13sp"
                 android:text="Rectangulo"
                 android:textColor="@drawable/text_color"

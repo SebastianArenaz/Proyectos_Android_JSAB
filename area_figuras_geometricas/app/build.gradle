@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.area_figuras_geometricas"
-        minSdk 21
+        minSdk 14
         targetSdk 31
         versionCode 1
         versionName "1.0"
